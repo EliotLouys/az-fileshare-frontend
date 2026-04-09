@@ -14,6 +14,7 @@ export function AuthProvider({ children }) {
   const isAuthenticated = !!token;
 
   const handleAuthSuccess = (newToken) => {
+    console.log("Authentication successful, received token:", newToken);
     setToken(newToken);
     window.localStorage.setItem("azfs_token", newToken);
     navigate("/");
@@ -23,6 +24,7 @@ export function AuthProvider({ children }) {
     setLoading(true);
     try {
       const data = await loginUser(creds);
+      console.log("retrieved data :",data);
       if (data && data.token) {
         handleAuthSuccess(data.token);
       } else {

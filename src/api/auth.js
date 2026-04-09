@@ -8,7 +8,7 @@ export async function registerUser({ email, password }) {
 export async function loginUser({ email, password }) {
   try {
     const res = await api.post("/auth/login", { username: email, password });
-
+    console.log("Login response:", res);
     return res.data;
   } catch (error) {
     console.error(error);

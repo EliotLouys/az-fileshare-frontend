@@ -16,7 +16,7 @@ param location string = resourceGroup().location
 param linuxFxVersion string = 'NODE|24-lts'
 
 @description('The startup command to run (e.g., API URL injection)')
-param startupCommand string = 'sed -i "s|__API_URL_PLACEHOLDER__|$API_URL|g" /home/site/wwwroot/dist/index.html && pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+param startupCommand string = 'find /home/site/wwwroot -name index.html -exec sed -i "s|__API_URL_PLACEHOLDER__|$API_URL|g" {} + && pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
 
 @description('The Verification ID for custom domains')
 param customDomainVerificationId string = '49668FD8DFF41E622C5C14D52AC5619D6A40E456CB3A06E59DE518E38B3939DD'

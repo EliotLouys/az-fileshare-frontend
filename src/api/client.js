@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "https://az-fileshare-backend-hug6ake3a8amdyc7.switzerlandnorth-01.azurewebsites.net",
 });
 
 api.interceptors.request.use((config) => {

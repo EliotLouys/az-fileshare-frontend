@@ -77,7 +77,7 @@ resource Microsoft_Sql_servers_auditingPolicies_serverName_Default 'Microsoft.Sq
 
 resource Microsoft_Sql_servers_auditingSettings_serverName_Default 'Microsoft.Sql/servers/auditingSettings@2024-11-01-preview' = {
   parent: sqlServer
-  name: 'Default'
+  name: 'default'
   properties: {
     retentionDays: 0
     auditActionsAndGroups: []
@@ -254,7 +254,7 @@ resource serverName_current 'Microsoft.Sql/servers/encryptionProtector@2024-11-0
 
 resource Microsoft_Sql_servers_extendedAuditingSettings_serverName_Default 'Microsoft.Sql/servers/extendedAuditingSettings@2024-11-01-preview' = {
   parent: sqlServer
-  name: 'Default'
+  name: 'default'
   properties: {
     retentionDays: 0
     auditActionsAndGroups: []
@@ -398,7 +398,7 @@ resource serverName_az_fileshare_sql_db_ForceLastGoodPlan 'Microsoft.Sql/servers
 
 resource Microsoft_Sql_servers_databases_auditingPolicies_serverName_az_fileshare_sql_db_Default 'Microsoft.Sql/servers/databases/auditingPolicies@2014-04-01' = {
   parent: serverName_az_fileshare_sql_db
-  name: 'Default'
+  name: 'default'
   location: location
   properties: {
     auditingState: 'Disabled'
@@ -410,7 +410,7 @@ resource Microsoft_Sql_servers_databases_auditingPolicies_serverName_az_fileshar
 
 resource Microsoft_Sql_servers_databases_auditingSettings_serverName_az_fileshare_sql_db_Default 'Microsoft.Sql/servers/databases/auditingSettings@2024-11-01-preview' = {
   parent: serverName_az_fileshare_sql_db
-  name: 'Default'
+  name: 'default'
   properties: {
     retentionDays: 0
     isAzureMonitorTargetEnabled: false
@@ -451,7 +451,7 @@ resource Microsoft_Sql_servers_databases_backupShortTermRetentionPolicies_server
 
 resource Microsoft_Sql_servers_databases_extendedAuditingSettings_serverName_az_fileshare_sql_db_Default 'Microsoft.Sql/servers/databases/extendedAuditingSettings@2024-11-01-preview' = {
   parent: serverName_az_fileshare_sql_db
-  name: 'Default'
+  name: 'default'
   properties: {
     retentionDays: 0
     isAzureMonitorTargetEnabled: false

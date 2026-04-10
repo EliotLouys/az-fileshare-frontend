@@ -13,13 +13,13 @@ L'Application Gateway centralise la gestion de la sécurité du trafic web et of
 ### Tests WAF :
 
 Preuve de fonctionnement de l'endpoint :
-![Schéma] (./docs/Preuve_health.png)
+![Schéma](./docs/Preuve_health.png)
 
 Injection 1 :
-![Schéma] (./docs/Injection_SQL.png)
+![Schéma](./docs/Injection_SQL.png)
 
 Injection 2 :
-![Schéma] (./docs/Injection_XSS.png)
+![Schéma](./docs/Injection_XSS.png)
 
 ## Tests de charge
 
